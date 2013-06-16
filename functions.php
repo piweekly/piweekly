@@ -10,8 +10,8 @@ function my_filter_head() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 
-function timestamped_stylesheet() {
-    $stylesheet = get_bloginfo('stylesheet_url');
-    $stylesheet_path = get_stylesheet_directory() . '/style.css';
-    echo $stylesheet . "?" . filemtime($stylesheet_path);
+function timestamped_stylesheet($stylesheet='style.css') {
+    $stylesheet_url = get_bloginfo('template_url') . '/' . $stylesheet;
+    $stylesheet_path = get_stylesheet_directory() . '/' . $stylesheet;
+    echo $stylesheet_url . "?" . filemtime($stylesheet_path);
 }

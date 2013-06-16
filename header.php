@@ -19,6 +19,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
     <link href="<?php timestamped_stylesheet(); ?>" rel="stylesheet" />
+    <link href="<?php timestamped_stylesheet('mobile.css'); ?>" rel="stylesheet" />
     <?php wp_head(); ?>
 </head>
 
