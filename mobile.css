@@ -9,6 +9,7 @@
 
     #footer {
         position: static;
+        left: 0;
         margin-top: 20px;
     }
 }
