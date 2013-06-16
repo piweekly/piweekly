@@ -1,6 +1,20 @@
 @media only screen and (max-width: 960px) {
-    body, #container, #header, #nav, #nav ul, #main, #footer {
-        max-width: 96%;
+    #nav ul li {
+        max-width: 25%;
+    }
+
+    #main {
+        padding-bottom: 0;
+    }
+
+    #footer {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    body, #container, #header, #main, #footer {
         margin: 0 1%;
         padding: 0 1%;
     }
@@ -11,12 +25,13 @@
 
     #nav ul li {
         width: 100%;
+        max-width: 100%;
         margin: 5px 0;
         text-align: center;
     }
 
     #main {
-        margin-top: 110px;
+        margin-top: 120px;
     }
 
     .home #main form {
@@ -25,10 +40,5 @@
 
     form input {
         max-width: 95%;
-    }
-
-    #footer {
-        position: static;
-        margin-top: 20px;
     }
 }
