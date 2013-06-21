@@ -159,6 +159,18 @@ h4 {font-size: 18px;}
     border: none;
 }
 
+.latest-issue {
+    margin-top: 50px;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
 #footer {
     position: absolute;
     bottom: 10px;
