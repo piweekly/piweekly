@@ -2,7 +2,8 @@
 
 function get_domain_from_url($url) {
     $parsed_url = parse_url($url);
-    return $parsed_url['host'];
+    $domain = str_replace('www.', '', $parsed_url['host']);
+    return $domain;
 }
 
 function get_date($date) {
