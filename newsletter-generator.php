@@ -25,15 +25,4 @@ $issue->the_post();
 <textarea rows="20" cols="100">
 <?php include 'email-template.php'; ?>
 </textarea/><br />
-
-<?php
-
-while (has_sub_field('news_items')) {
-    $title = get_sub_field('title');
-    $url = get_sub_field('url');
-    $summary = get_sub_field('summary');
-}
-
-?>
-
 </form>
