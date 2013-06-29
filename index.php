@@ -1,15 +1,5 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
+Error 404 - you're looking for Pi in all the wrong places
 
-the_post();
-
-if (is_page('archive')) {
-    get_template_part('archive', 'loop');
-}
-else {
-    the_content();
-    get_template_part('latest', 'issue');
-}
-
-get_footer();
+<?php get_footer();
