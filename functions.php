@@ -45,3 +45,25 @@ function timestamped_stylesheet($stylesheet='style.css') {
     $stylesheet_path = get_stylesheet_directory() . '/' . $stylesheet;
     echo $stylesheet_url . "?" . filemtime($stylesheet_path);
 }
+
+function get_latest_issue() {
+    $args = array(
+        'post_type' => 'post',
+    );
+
+    $issues = new WP_Query($args);
+
+    while ($issues->have_posts()) {
+        $issues->the_post();
+
+        if (get_field('mailchimp_url')) {
+            break;
+        }
+    }
+
+    return array(
+        'issue_number' => get_field('issue_number'),
+        'mailchimp_url' => get_field('mailchimp_url'),
+        'title' => get_the_title(),
+    );
+}

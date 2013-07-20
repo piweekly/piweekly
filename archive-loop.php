@@ -1,7 +1,7 @@
 <?php
 
 $args = array(
-    'post_type' => 'issue',
+    'post_type' => 'post',
 );
 
 $issues = new WP_Query($args);
@@ -14,7 +14,9 @@ $issues = new WP_Query($args);
 
 while ($issues->have_posts()) {
     $issues->the_post();
-    get_template_part('archive', 'issue');
+    if (get_field('mailchimp_url')) {
+        get_template_part('archive', 'issue');
+    }
 }
 
 ?>
