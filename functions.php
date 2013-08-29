@@ -10,6 +10,33 @@ function my_filter_head() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 
+// Change Post to Issue
+function change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Issue';
+    $submenu['edit.php'][5][0] = 'Issue';
+    $submenu['edit.php'][10][0] = 'New Issue';
+    $submenu['edit.php'][16][0] = 'Issue Tags';
+}
+
+function change_post_object_label() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Issue';
+    $labels->singular_name = 'Issue';
+    $labels->add_new = 'New Issue';
+    $labels->add_new_item = 'New Issue';
+    $labels->edit_item = 'Edit Issue';
+    $labels->new_item = 'New Issue';
+    $labels->view_item = 'View Issue';
+    $labels->search_items = 'Search Issues';
+    $labels->not_found = 'Not found';
+    $labels->not_found_in_trash = 'Not found in Trash';
+ }
+ add_action('init', 'change_post_object_label');
+ add_action('admin_menu', 'change_post_menu_label');
+
 function timestamped_stylesheet($stylesheet='style.css') {
     $stylesheet_url = get_bloginfo('template_url') . '/' . $stylesheet;
     $stylesheet_path = get_stylesheet_directory() . '/' . $stylesheet;
