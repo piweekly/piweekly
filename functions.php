@@ -14,8 +14,8 @@ function my_filter_head() {
 function change_post_menu_label() {
     global $menu;
     global $submenu;
-    $menu[5][0] = 'Issue';
-    $submenu['edit.php'][5][0] = 'Issue';
+    $menu[5][0] = 'Issues';
+    $submenu['edit.php'][5][0] = 'Issues';
     $submenu['edit.php'][10][0] = 'New Issue';
     $submenu['edit.php'][16][0] = 'Issue Tags';
 }
@@ -23,7 +23,7 @@ function change_post_menu_label() {
 function change_post_object_label() {
     global $wp_post_types;
     $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Issue';
+    $labels->name = 'Issues';
     $labels->singular_name = 'Issue';
     $labels->add_new = 'New Issue';
     $labels->add_new_item = 'New Issue';
