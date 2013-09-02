@@ -11,7 +11,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width" />
-    <title><?php wp_title('| ', true, 'right'); bloginfo('title'); ?></title>
+    <title><?php pw_title(); ?></title>
     <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/piweekly-64x64.png" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -26,7 +26,7 @@
 <body <?php body_class(); ?>>
 <div id="container">
 <header id="header">
-    <h1><a href="/"><?php bloginfo('title'); ?></a></h1>
+    <h1><a href="/"><?php pw_header(); ?></a></h1>
     &mdash; <?php bloginfo('description'); ?> &mdash;
 </header>
 <?php get_template_part('nav'); ?>

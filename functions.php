@@ -64,3 +64,18 @@ function get_latest_issue() {
         'title' => get_the_title(),
     );
 }
+
+function pw_title() {
+    if (is_front_page()) {
+        bloginfo('title');
+        echo " - free email newsletter for Raspberry Pi News &amp; Projects";
+    }
+    else {
+        bloginfo('title');
+        wp_title(' |', true, 'left');
+    }
+}
+
+function pw_header() {
+    echo str_replace(' ', '', strtolower(get_bloginfo('title')));
+}
