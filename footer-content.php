@@ -6,6 +6,7 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 <a href="http://us7.campaign-archive1.com/feed?u=a3e42d3ea4355ad45198b39ba&id=2141506785" title="Subscribe via RSS"><img src="<?php bloginfo('template_url'); ?>/images/rss.png" /></a><br />
+<a href="https://plus.google.com/115314740509856081162" rel="publisher">Google+</a><br/>
 
 piweekly.net is a community project by <a href="http://twitter.com/ben_nuttall">Ben Nuttall</a> and <a href="http://twitter.com/ryanteck">Ryan Walmsley</a>.<br />
 <a href="https://github.com/bennuttall/piweekly"><em>piweekly</em></a> Wordpress Theme by <a href="http://bennuttall.com/">Ben Nuttall</a> - source available on <a href="https://github.com/bennuttall/piweekly">github</a>.
