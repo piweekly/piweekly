@@ -11,11 +11,7 @@ function get_date($date) {
     return $datetime->format('l j F Y');
 }
 
-$args = array(
-    'posts_per_page' => 1,
-);
-
-$issue = new WP_Query($args);
+$issue = new WP_Query('posts_per_page=1');
 
 $issue->the_post();
 
