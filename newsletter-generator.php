@@ -11,6 +11,10 @@ function get_date($date) {
     return $datetime->format('l j F Y');
 }
 
+function strip_paragraphs($content) {
+    return str_replace('<p>', '', str_replace('</p>', '', $content));
+}
+
 $issue = new WP_Query('posts_per_page=1');
 
 $issue->the_post();
