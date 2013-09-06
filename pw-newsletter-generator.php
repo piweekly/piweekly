@@ -3,7 +3,7 @@
 Plugin Name: Pi Weekly Newsletter Generator
 Plugin URI: https://github.com/bennuttall/piweekly-newsletter-generator
 Description: Generate HTML snippets for a mailchimp newsletter
-Version: 1.1
+Version: 1.2
 Author: Ben Nuttall
 Author URI: http://bennuttall.com/
 */
