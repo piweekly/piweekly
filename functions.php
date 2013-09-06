@@ -44,11 +44,7 @@ function timestamped_stylesheet($stylesheet='style.css') {
 }
 
 function get_latest_issue() {
-    $args = array(
-        'post_type' => 'post',
-    );
-
-    $issues = new WP_Query($args);
+    $issues = new WP_Query('post_type=post');
 
     while ($issues->have_posts()) {
         $issues->the_post();
