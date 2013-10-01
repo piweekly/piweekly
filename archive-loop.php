@@ -1,12 +1,4 @@
-<?php
-
-$args = array(
-    'post_type' => 'post',
-);
-
-$issues = new WP_Query($args);
-
-?>
+<?php $issues = new WP_Query('posts_per_page=1000'); ?>
 
 <ul>
 

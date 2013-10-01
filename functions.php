@@ -37,6 +37,44 @@ function change_post_object_label() {
  add_action('init', 'change_post_object_label');
  add_action('admin_menu', 'change_post_menu_label');
 
+function create_interview_post_type() {
+  $labels = array(
+    'name'               => 'Interviews',
+    'singular_name'      => 'Interview',
+    'add_new'            => 'Add New',
+    'add_new_item'       => 'Add New Interview',
+    'edit_item'          => 'Edit Interview',
+    'new_item'           => 'New Interview',
+    'all_items'          => 'All Interviews',
+    'view_item'          => 'View Interview',
+    'search_items'       => 'Search Interviews',
+    'not_found'          => 'No Interviews found',
+    'not_found_in_trash' => 'No Interviews found in Trash',
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Interviews'
+  );
+
+$args = array(
+    'labels'             => $labels,
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => array('slug' => 'interview'),
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'           => array('title', 'editor', 'excerpt'),
+);
+
+    register_post_type('interview', $args);
+}
+add_action('init', 'create_interview_post_type');
+
+register_post_type('interview', $args);
+
 function timestamped_stylesheet($stylesheet='style.css') {
     $stylesheet_url = get_bloginfo('template_url') . '/' . $stylesheet;
     $stylesheet_path = get_stylesheet_directory() . '/' . $stylesheet;
@@ -44,7 +82,7 @@ function timestamped_stylesheet($stylesheet='style.css') {
 }
 
 function get_latest_issue() {
-    $issues = new WP_Query('post_type=post');
+    $issues = new WP_Query('posts_per_page=1000');
 
     while ($issues->have_posts()) {
         $issues->the_post();
