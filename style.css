@@ -175,6 +175,11 @@ ul li {
     list-style-type: none;
 }
 
+.wp-post-image {
+    display: block;
+    margin: 0 auto;
+}
+
 #footer {
     position: absolute;
     bottom: 10px;

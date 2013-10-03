@@ -10,7 +10,8 @@ the_post();
 
 <?php
 
-the_field('excerpt');
+the_field('intro');
+the_post_thumbnail('email');
 the_content();
 
 get_footer();

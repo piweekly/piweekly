@@ -6,6 +6,12 @@ register_nav_menu('nav_bar', 'Nav Bar');
 // Hack to disable WP adding 28px margin-top to the body for the admin bar
 add_action('get_header', 'my_filter_head');
 
+// Add Featured Images
+add_theme_support('post-thumbnails');
+
+// Image Sizes
+add_image_size('email', 564, 564, false);
+
 function my_filter_head() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
@@ -38,42 +44,40 @@ function change_post_object_label() {
  add_action('admin_menu', 'change_post_menu_label');
 
 function create_interview_post_type() {
-  $labels = array(
-    'name'               => 'Interviews',
-    'singular_name'      => 'Interview',
-    'add_new'            => 'Add New',
-    'add_new_item'       => 'Add New Interview',
-    'edit_item'          => 'Edit Interview',
-    'new_item'           => 'New Interview',
-    'all_items'          => 'All Interviews',
-    'view_item'          => 'View Interview',
-    'search_items'       => 'Search Interviews',
-    'not_found'          => 'No Interviews found',
-    'not_found_in_trash' => 'No Interviews found in Trash',
-    'parent_item_colon'  => '',
-    'menu_name'          => 'Interviews'
-  );
+    $labels = array(
+        'name'               => 'Interviews',
+        'singular_name'      => 'Interview',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Interview',
+        'edit_item'          => 'Edit Interview',
+        'new_item'           => 'New Interview',
+        'all_items'          => 'All Interviews',
+        'view_item'          => 'View Interview',
+        'search_items'       => 'Search Interviews',
+        'not_found'          => 'No Interviews found',
+        'not_found_in_trash' => 'No Interviews found in Trash',
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Interviews',
+    );
 
-$args = array(
-    'labels'             => $labels,
-    'public'             => true,
-    'publicly_queryable' => true,
-    'show_ui'            => true,
-    'show_in_menu'       => true,
-    'query_var'          => true,
-    'rewrite'            => array('slug' => 'interview'),
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'hierarchical'       => false,
-    'menu_position'      => null,
-    'supports'           => array('title', 'editor', 'excerpt'),
-);
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'interview'),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array('title', 'editor', 'excerpt', 'thumbnail'),
+    );
 
     register_post_type('interview', $args);
 }
 add_action('init', 'create_interview_post_type');
-
-register_post_type('interview', $args);
 
 function timestamped_stylesheet($stylesheet='style.css') {
     $stylesheet_url = get_bloginfo('template_url') . '/' . $stylesheet;
