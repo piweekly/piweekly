@@ -5,8 +5,10 @@ include 'template-header.php';
 include 'intro.php';
 include 'border-thick.php';
 
-include 'picture.php';
-include 'border-thin.php';
+if (has_post_thumbnail()) {
+    include 'picture.php';
+    include 'border-thin.php';
+}
 
 $section_title = "News";
 $section = "news";
