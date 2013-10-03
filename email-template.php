@@ -22,6 +22,11 @@ $section_title = "Articles & more";
 $section = "articles";
 include 'links-section.php';
 
+if (get_field('interview')) {
+    include 'border-thin.php';
+    include 'interview.php';
+}
+
 if (get_field('sponsor')) {
     include 'border-thin.php';
     include 'sponsor.php';
