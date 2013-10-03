@@ -44,3 +44,6 @@ include 'email-template.php';
 ?>
 </textarea/><br />
 </form>
+<form action="http://mailchimp.com/" target="_new">
+<input type="submit" value="Go to Mailchimp" />
+</form>
