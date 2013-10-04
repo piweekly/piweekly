@@ -117,3 +117,10 @@ function pw_title() {
 function pw_header() {
     echo str_replace(' ', '', strtolower(get_bloginfo('title')));
 }
+
+// Shortcode [userbio]
+function pw_user_bio($opts) {
+    $id = $opts['id'];
+    return get_field('bio', "user_{$id}");
+}
+add_shortcode('userbio', 'pw_user_bio');
