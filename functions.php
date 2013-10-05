@@ -79,13 +79,23 @@ function create_interview_post_type() {
 }
 add_action('init', 'create_interview_post_type');
 
+// Useful functions
+
 function timestamped_stylesheet($stylesheet='style.css') {
     $stylesheet_url = get_bloginfo('template_url') . '/' . $stylesheet;
     $stylesheet_path = get_stylesheet_directory() . '/' . $stylesheet;
     echo $stylesheet_url . "?" . filemtime($stylesheet_path);
 }
 
-function get_latest_issue() {
+function get_domain_from_url($url) {
+    $parsed_url = parse_url($url);
+    $domain = str_replace('www.', '', $parsed_url['host']);
+    return $domain;
+}
+
+// Pi Weekly specific functions
+
+function pw_get_latest_issue() {
     $issues = new WP_Query('posts_per_page=1000');
 
     while ($issues->have_posts()) {
@@ -124,3 +134,8 @@ function pw_user_bio($opts) {
     return get_field('bio', "user_{$id}");
 }
 add_shortcode('userbio', 'pw_user_bio');
+
+function pw_date_format($date) {
+    $datetime = new DateTime($date);
+    return $datetime->format('j F Y');
+}
