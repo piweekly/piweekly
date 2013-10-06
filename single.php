@@ -6,13 +6,14 @@ the_post();
 
 ?>
 
-<article>
-    <h2>Issue #<?php the_field('issue_number'); ?> &mdash; <?php the_title(); ?></h2>
-    <div class="date"><?php echo pw_date_format(get_field('date')); ?></div>
+<article class="issue">
+    <header>
+        <h2>Issue #<?php the_field('issue_number'); ?> &mdash; <?php the_title(); ?></h2>
+        <div class="date"><?php echo pw_date_format(get_field('date')); ?></div>
+    </header>
 
     <?php the_content(); ?>
-
-    <hr />
+    <hr class="thick" />
 
     <?php if (has_post_thumbnail()): ?>
         <h3>Picture of the week</h3>
@@ -25,26 +26,38 @@ the_post();
     <?php endif; ?>
 
     <h3>News</h3>
+    <ul>
     <?php while (has_sub_field('news')): ?>
-        <br /><a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
-        <?php the_sub_field('summary'); ?><br />
+        <li>
+            <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
+            <?php the_sub_field('summary'); ?>
+        </li>
     <?php endwhile; ?>
+    </ul>
     <hr />
 
     <h3>Projects</h3>
+    <ul>
     <?php while (has_sub_field('projects')): ?>
-        <br /><a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
-        <?php the_sub_field('summary'); ?><br />
+        <li>
+            <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
+            <?php the_sub_field('summary'); ?>
+        </li>
     <?php endwhile; ?>
+    </ul>
     <hr />
 
     <h3>Articles &amp; more</h3>
+    <ul>
     <?php while (has_sub_field('articles')): ?>
-        <br /><a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
-        <?php the_sub_field('summary'); ?><br />
-    <?php endwhile;
+        <li>
+            <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
+            <?php the_sub_field('summary'); ?>
+        </li>
+    <?php endwhile; ?>
+    </ul>
 
-    if (get_field('interview')):
+    <?php if (get_field('interview')):
         $interview = array_pop(get_field('interview')); ?>
         <hr />
         <h3>Interview: <?php echo get_the_title($interview); ?></h3>
@@ -64,9 +77,15 @@ the_post();
         <?php the_field('sponsor_text');
     endif; ?>
 
-    <hr />
+    <hr class="thick" />
     <h3>Contact &amp; Submissions</h3>
     <p>This newsletter is curated by <a href="http://twitter.com/ben_nuttall" target="_blank">@ben_nuttall</a> and <a href="http://twitter.com/ryanteck" target="_blank">@ryanteck</a>. Tweet links to <a href="http://twitter.com/pi_weekly" target="_blank">@pi_weekly</a> or email <a href="mailto:submissions@piweekly.net" target="_blank">submissions@piweekly.net</a></p>
+
+    <footer>
+        <nav class="prev"><?php previous_post_link(); ?></nav>
+        <nav class="next"><?php next_post_link(); ?></nav>
+    </footer>
+
 </article>
 
 <?php get_footer();

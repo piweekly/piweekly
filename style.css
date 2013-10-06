@@ -185,6 +185,47 @@ ul li {
     margin: 0 auto;
 }
 
+.issue {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.issue .date {
+    font-style: italic;
+}
+
+.issue h2 {
+    margin: 0;
+}
+
+.issue ul li {
+    margin-bottom: 15px;
+}
+
+.issue ul li a {
+    text-decoration: underline;
+}
+
+.issue hr {
+    background: #333;
+    height: 1px;
+    border: 0;
+    margin: 30px 0;
+}
+
+.issue hr.thick {
+    height: 3px;
+}
+
+.issue footer nav {
+    float: left;
+    width: 50%;
+}
+
+.issue footer nav.next {
+    text-align: right;
+}
+
 #footer {
     position: absolute;
     bottom: 10px;

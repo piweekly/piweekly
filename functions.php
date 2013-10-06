@@ -102,15 +102,9 @@ function pw_get_latest_issue() {
         $issues->the_post();
 
         if (get_field('mailchimp_url')) {
-            break;
+            return get_the_ID();
         }
     }
-
-    return array(
-        'issue_number' => get_field('issue_number'),
-        'mailchimp_url' => get_field('mailchimp_url'),
-        'title' => get_the_title(),
-    );
 }
 
 function pw_title() {
