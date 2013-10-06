@@ -101,7 +101,7 @@ function pw_get_latest_issue() {
     while ($issues->have_posts()) {
         $issues->the_post();
 
-        if (get_field('mailchimp_url')) {
+        if (get_field('live')) {
             return get_the_ID();
         }
     }
@@ -132,4 +132,33 @@ add_shortcode('userbio', 'pw_user_bio');
 function pw_date_format($date) {
     $datetime = new DateTime($date);
     return $datetime->format('j F Y');
+}
+
+function pw_prevnext($prev_or_next) {
+    $next = $prev_or_next == 'next';
+    $link_post = $next ? get_next_post() : get_previous_post();
+    $id = $link_post->ID;
+
+    $wording = "Issue #" . get_field('issue_number', $id) . " &mdash; " . get_the_title($id);
+    $link = get_permalink($id);
+
+    $html = "<a href='{$link}'>{$wording}</a>";
+
+    return $next ? "{$html} &raquo;" : "&laquo; {$html}";
+}
+
+add_filter('next_post_link', 'pw_next_issue_link', 10, 0);
+function pw_next_issue_link() {
+    if (get_next_post()) {
+        return pw_prevnext('next');
+    }
+    return '&nbsp;';
+}
+
+add_filter('previous_post_link', 'pw_previous_issue_link', 10, 0);
+function pw_previous_issue_link() {
+    if (get_previous_post()) {
+        return pw_prevnext('previous');
+    }
+    return '&nbsp;';
 }
