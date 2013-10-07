@@ -139,6 +139,10 @@ function pw_prevnext($prev_or_next) {
     $link_post = $next ? get_next_post() : get_previous_post();
     $id = $link_post->ID;
 
+    if (!get_field('live', $id)) {
+        return '&nbsp;';
+    }
+
     $wording = "Issue #" . get_field('issue_number', $id) . " &mdash; " . get_the_title($id);
     $link = get_permalink($id);
 
