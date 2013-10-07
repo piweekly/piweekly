@@ -105,16 +105,7 @@ h4 {font-size: 18px;}
     font-weight: bold;
 }
 
-#nav ul li a:visited {
-    color: #5C1F25;
-}
-
-#nav ul li a:hover {
-    background: none;
-    color: #5C1F25;
-}
-
-#nav ul li.current_page_item a, #nav ul li a:hover {
+#nav ul li.current_page_item a, .single-post #nav ul li#menu-item-25 a, #nav ul li a:hover {
     text-decoration: underline;
 }
 
