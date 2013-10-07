@@ -1,6 +1,10 @@
 @media only screen and (max-width: 960px) {
+    #nav ul {
+        height: auto;
+    }
+
     #nav ul li {
-        max-width: 25%;
+        max-width: 20%;
     }
 
     #main {
@@ -33,15 +37,17 @@
         font-size: 50px;
     }
 
+    #nav {
+        margin: 10px 0;
+    }
+
     #nav ul li {
         width: 100%;
         max-width: 100%;
+        height: auto;
         margin: 5px 0;
         text-align: center;
-    }
-
-    #main {
-        margin-top: 120px;
+        clear: both;
     }
 
     .home #main form {

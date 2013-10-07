@@ -85,6 +85,7 @@ h4 {font-size: 18px;}
 #nav {
     width: 720px;
     max-width: 100%;
+    height: auto;
     margin: 30px auto;
 }
 
@@ -179,6 +180,7 @@ ul li {
 .issue {
     width: 600px;
     margin: 0 auto;
+    font-size: 15px;
 }
 
 .issue .date {
