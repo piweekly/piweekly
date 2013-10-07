@@ -80,6 +80,7 @@ the_post();
     <hr class="thick" />
     <h3>Contact &amp; Submissions</h3>
     <p>This newsletter is curated by <a href="http://twitter.com/ben_nuttall" target="_blank">@ben_nuttall</a> and <a href="http://twitter.com/ryanteck" target="_blank">@ryanteck</a>. Tweet links to <a href="http://twitter.com/pi_weekly" target="_blank">@pi_weekly</a> or email <a href="mailto:submissions@piweekly.net" target="_blank">submissions@piweekly.net</a></p>
+    <hr class="thick" />
 
     <footer>
         <nav class="prev"><?php previous_post_link(); ?></nav>
