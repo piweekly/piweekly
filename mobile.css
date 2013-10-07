@@ -7,6 +7,15 @@
         padding-bottom: 0;
     }
 
+    .issue {
+        width: 100%;
+    }
+
+    .issue img {
+        width: 100%;
+        height: auto;
+    }
+
     #footer {
         position: static;
         left: 0;
