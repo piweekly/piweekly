@@ -85,6 +85,7 @@ the_post();
     <footer>
         <nav class="prev"><?php previous_post_link(); ?></nav>
         <nav class="next"><?php next_post_link(); ?></nav>
+        <div style="clear:both;"></div>
     </footer>
 
 </article>
