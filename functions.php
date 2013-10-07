@@ -108,12 +108,14 @@ function pw_get_latest_issue() {
 }
 
 function pw_title() {
+    bloginfo('title');
     if (is_front_page()) {
-        bloginfo('title');
         echo " - free email newsletter for Raspberry Pi News &amp; Projects";
     }
+    elseif (is_singular('post')) {
+        echo " Issue #" . get_field('issue_number') . " - " . get_the_title();
+    }
     else {
-        bloginfo('title');
         wp_title(' |', true, 'left');
     }
 }
