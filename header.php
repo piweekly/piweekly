@@ -26,7 +26,9 @@
 <body <?php body_class(); ?>>
 <div id="container">
 <header id="header">
-    <h1><a href="/"><?php pw_header(); ?></a></h1>
+    <?php pw_header_tag(); ?>
+        <a href="/"><?php pw_header(); ?></a>
+    <?php pw_header_tag(false); ?>
     &mdash; <?php bloginfo('description'); ?> &mdash;
 </header>
 <?php get_template_part('nav'); ?>

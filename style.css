@@ -42,10 +42,21 @@ h1, h2, h3, h4, h5, h6 {
     color: #862D33;
 }
 
-h1 {font-size: 80px;}
+.home h1 {font-size: 22px;}
+.home h1 {font-size: 80px;}
+
 h2 {font-size: 22px;}
 h3 {font-size: 20px;}
 h4 {font-size: 18px;}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+h1 a, h1 a:visited, h1 a:hover {
+    color: #862D33;
+    text-decoration: none;
+}
 
 #container {
     min-height: 100%;
@@ -71,11 +82,13 @@ h4 {font-size: 18px;}
     padding-top: 48px;
 }
 
-#header h1 {
+#header strong {
+    display: block;
     margin: 0 0 20px;
+    font-size: 80px;
 }
 
-#header h1 a, #header h1 a:visited, #header h1 a:hover {
+#header strong a, #header strong a:visited, #header strong a:hover {
     text-decoration: none;
     background: none;
     color: #862D33;

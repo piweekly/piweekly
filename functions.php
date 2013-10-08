@@ -168,3 +168,8 @@ function pw_previous_issue_link() {
     }
     return '&nbsp;';
 }
+
+function pw_header_tag($open=true) {
+    $tag = is_front_page() ? 'h1' : 'strong';
+    echo $open ? "<{$tag}>" : "</{$tag}>";
+}
