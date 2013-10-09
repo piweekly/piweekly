@@ -221,6 +221,35 @@ ul li {
     height: 3px;
 }
 
+.issue .signup {
+    text-align: center;
+}
+
+.issue .signup p {
+    font-weight: bold;
+}
+
+.issue .signup form input {
+    height: 22px;
+    padding: 2px;
+    margin: 2px;
+}
+
+.issue .signup form input[type="submit"] {
+    width: 100px;
+    height: 28px;
+    font-size: 16px;
+    background: #862D33;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.issue form input:focus {
+    outline: none;
+}
+
 .issue footer nav {
     float: left;
     width: 50%;

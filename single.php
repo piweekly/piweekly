@@ -82,9 +82,19 @@ the_post();
         <?php the_field('sponsor_text');
     endif; ?>
 
-    <hr class="thick" />
+    <hr />
     <h2>Contact &amp; Submissions</h2>
     <p>This newsletter is curated by <a href="http://twitter.com/ben_nuttall" target="_blank">@ben_nuttall</a> and <a href="http://twitter.com/ryanteck" target="_blank">@ryanteck</a>. Tweet links to <a href="http://twitter.com/pi_weekly" target="_blank">@pi_weekly</a> or email <a href="mailto:submissions@piweekly.net" target="_blank">submissions@piweekly.net</a></p>
+    <hr class="thick" />
+
+    <div class="signup">
+        <p>Like the look of this newsletter? Sign up to Pi Weekly now:</p>
+        <form action="http://bennuttall.us7.list-manage2.com/subscribe/post?u=a3e42d3ea4355ad45198b39ba&amp;id=2141506785" method="post" name="mc-embedded-subscribe-form">
+            <label for="mce-EMAIL">Email address:</label>
+            <input id="mce-EMAIL" type="email" name="EMAIL" />
+            <input type="submit" name="subscribe" value="Subscribe" />
+        </form>
+    </div>
     <hr class="thick" />
 
     <footer>
