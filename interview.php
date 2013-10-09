@@ -14,7 +14,7 @@
                                         <?php echo get_the_post_thumbnail($interview, 'email', array('class' => 'mcnImage')); ?>
                                     </a>
                                 </div><br />
-                                <?php echo nl2br(strip_paragraphs(the_field('intro', $interview))); ?>
+                                <?php echo nl2br(strip_paragraphs(get_field('intro', $interview))); ?>
                                 <a href="<?php echo get_permalink($interview); ?>" target="_blank">Read the full interview on piweekly.net</a>
                             </td>
                         </tr>
