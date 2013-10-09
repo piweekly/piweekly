@@ -87,12 +87,6 @@ function timestamped_stylesheet($stylesheet='style.css') {
     echo $stylesheet_url . "?" . filemtime($stylesheet_path);
 }
 
-function get_domain_from_url($url) {
-    $parsed_url = parse_url($url);
-    $domain = str_replace('www.', '', $parsed_url['host']);
-    return $domain;
-}
-
 // Pi Weekly specific functions
 
 function pw_get_latest_issue() {
