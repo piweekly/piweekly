@@ -173,3 +173,14 @@ function pw_header_tag($open=true) {
     $tag = is_front_page() ? 'h1' : 'strong';
     echo $open ? "<{$tag}>" : "</{$tag}>";
 }
+
+function pw_centred_pages() {
+    if (is_front_page() ||
+    is_page('archive') ||
+    is_page('submissions') ||
+    is_page('sponsorship') ||
+    is_page('thanks') ||
+    is_page('confirmation')) {
+        echo "centred";
+    }
+}

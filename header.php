@@ -32,4 +32,4 @@
     &mdash; <?php bloginfo('description'); ?> &mdash;
 </header>
 <?php get_template_part('nav'); ?>
-<div id="main">
+<div id="main" class="<?php pw_centred_pages(); ?>">

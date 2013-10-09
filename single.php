@@ -13,7 +13,7 @@ the_post();
 
 <article class="issue">
     <header>
-        <h2>Issue #<?php the_field('issue_number'); ?> &mdash; <?php the_title(); ?></h2>
+        <h1>Issue #<?php the_field('issue_number'); ?> &mdash; <?php the_title(); ?></h1>
         <div class="date"><?php echo pw_date_format(get_field('date')); ?></div>
     </header>
 
@@ -21,7 +21,7 @@ the_post();
     <hr class="thick" />
 
     <?php if (has_post_thumbnail()): ?>
-        <h3>Picture of the week</h3>
+        <h2>Picture of the week</h2>
         <a href="<?php the_field('picture_link'); ?>" target="_blank">
             <?php the_post_thumbnail('email'); ?>
         </a>
@@ -30,7 +30,7 @@ the_post();
         <hr />
     <?php endif; ?>
 
-    <h3>News</h3>
+    <h2>News</h2>
     <ul>
     <?php while (has_sub_field('news')): ?>
         <li>
@@ -41,7 +41,7 @@ the_post();
     </ul>
     <hr />
 
-    <h3>Projects</h3>
+    <h2>Projects</h2>
     <ul>
     <?php while (has_sub_field('projects')): ?>
         <li>
@@ -52,7 +52,7 @@ the_post();
     </ul>
     <hr />
 
-    <h3>Articles &amp; more</h3>
+    <h2>Articles &amp; more</h2>
     <ul>
     <?php while (has_sub_field('articles')): ?>
         <li>
@@ -65,7 +65,7 @@ the_post();
     <?php if (get_field('interview')):
         $interview = array_pop(get_field('interview')); ?>
         <hr />
-        <h3>Interview: <?php echo get_the_title($interview); ?></h3>
+        <h2>Interview: <?php echo get_the_title($interview); ?></h2>
         <a href="<?php echo get_permalink($interview); ?>" target="_blank">
             <?php echo get_the_post_thumbnail($interview, 'email'); ?>
         </a>
@@ -75,7 +75,7 @@ the_post();
 
     if (get_field('sponsor')): ?>
         <hr />
-        <h3>Thanks to our sponsor</h3>
+        <h2>Thanks to our sponsor</h2>
             <a href="<?php the_field('sponsor_url'); ?>" target="_blank">
                 <img src="<?php $logo = get_field('sponsor_logo'); echo $logo['sizes']['email']; ?>" />
             </a>
@@ -83,7 +83,7 @@ the_post();
     endif; ?>
 
     <hr class="thick" />
-    <h3>Contact &amp; Submissions</h3>
+    <h2>Contact &amp; Submissions</h2>
     <p>This newsletter is curated by <a href="http://twitter.com/ben_nuttall" target="_blank">@ben_nuttall</a> and <a href="http://twitter.com/ryanteck" target="_blank">@ryanteck</a>. Tweet links to <a href="http://twitter.com/pi_weekly" target="_blank">@pi_weekly</a> or email <a href="mailto:submissions@piweekly.net" target="_blank">submissions@piweekly.net</a></p>
     <hr class="thick" />
 
