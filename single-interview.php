@@ -1,5 +1,10 @@
 <?php
 
+if (!is_user_logged_in() && !get_field('live')) {
+    get_template_part('404');
+    return;
+}
+
 get_header();
 
 the_post();
