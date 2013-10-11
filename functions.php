@@ -109,6 +109,9 @@ function pw_title() {
     elseif (is_singular('post')) {
         echo " Issue #" . get_field('issue_number') . " - " . get_the_title();
     }
+    elseif (is_singular('interview')) {
+        echo " | Interview - " . get_the_title();
+    }
     else {
         wp_title(' |', true, 'left');
     }
