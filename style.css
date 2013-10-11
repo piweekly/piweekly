@@ -132,7 +132,7 @@ h3 {font-size: 18px;}
     text-align: left;
 }
 
-#main.centred {
+#main.centred, #main .notfound {
     text-align: center;
 }
 

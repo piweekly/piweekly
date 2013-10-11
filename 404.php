@@ -1,5 +1,5 @@
-<?php get_header(); ?>
+<?php  get_header(); ?>
 
-Error 404 - you're looking for Pi in all the wrong places
+<div class="notfound">Error 404 - you're looking for Pi in all the wrong places</div>
 
 <?php get_footer();
