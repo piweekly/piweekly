@@ -57,4 +57,15 @@
     form input {
         max-width: 95%;
     }
+
+    ul.archive li.archive-issue {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    ul.archive li.archive-issue {
+        float: left;
+        width: 100%;
+    }
 }

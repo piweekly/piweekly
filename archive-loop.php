@@ -1,6 +1,6 @@
 <?php $issues = new WP_Query('posts_per_page=1000'); ?>
 
-<ul>
+<ul class="archive">
 
 <?php
 
@@ -14,3 +14,4 @@ while ($issues->have_posts()) {
 ?>
 
 </ul>
+<div style="clear:both;"></div>

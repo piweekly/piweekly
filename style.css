@@ -261,6 +261,16 @@ h3 {font-size: 18px;}
     margin-top: 50px;
 }
 
+ul.archive li.archive-issue {
+    float: left;
+    width: 33%;
+    margin-bottom: 20px;
+}
+
+.archive-issue-date {
+    font-size: 11px;
+}
+
 ul {
     padding: 0;
 }
