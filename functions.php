@@ -149,18 +149,12 @@ function pw_prevnext($prev_or_next) {
 
 add_filter('next_post_link', 'pw_next_issue_link', 10, 0);
 function pw_next_issue_link() {
-    if (get_next_post()) {
-        return pw_prevnext('next');
-    }
-    return '&nbsp;';
+    return get_next_post() ? pw_prevnext('next') : '&nbsp;';
 }
 
 add_filter('previous_post_link', 'pw_previous_issue_link', 10, 0);
 function pw_previous_issue_link() {
-    if (get_previous_post()) {
-        return pw_prevnext('previous');
-    }
-    return '&nbsp;';
+    return get_next_post() ? pw_prevnext('previous') : '&nbsp;';
 }
 
 function pw_header_tag($open=true) {
