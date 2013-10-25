@@ -15,9 +15,16 @@
         width: 100%;
     }
 
-    .issue img {
-        width: 100%;
+    #main img {
+        width: auto;
+        max-width: 100%;
         height: auto;
+    }
+
+    .alignleft, .alignright, a img.alightleft, a img.alignright {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #footer {
@@ -33,7 +40,7 @@
         padding: 0 1%;
     }
 
-    #header h1 {
+    #header h1, #header strong {
         font-size: 50px;
     }
 
