@@ -257,7 +257,7 @@ h3 {font-size: 18px;}
     border: none;
 }
 
-.latest-issue {
+.latest-issues {
     margin-top: 50px;
 }
 
@@ -267,12 +267,20 @@ li.archive-issue {
     margin-bottom: 20px;
 }
 
+.home li.archive-issue {
+    margin: 40px 0;
+}
+
 li.archive-issue img {
     border: 2px solid #862D33;
 }
 
 .archive-issue-date {
     font-size: 11px;
+}
+
+.home p.home-final {
+    margin-bottom: 40px;
 }
 
 ul {
