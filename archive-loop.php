@@ -6,9 +6,7 @@
 
 while ($issues->have_posts()) {
     $issues->the_post();
-    if (get_field('live')) {
-        get_template_part('archive', 'issue');
-    }
+    get_template_part('archive', 'issue');
 }
 
 ?>

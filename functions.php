@@ -90,16 +90,13 @@ function timestamped_stylesheet($stylesheet='style.css') {
 // Pi Weekly specific functions
 
 function pw_get_latest_issues() {
-    $issues = new WP_Query('posts_per_page=1000');
+    $issues = new WP_Query('posts_per_page=3');
 
     $issue_ids = array();
 
-    while ($issues->have_posts() && count($issue_ids) < 3) {
+    while ($issues->have_posts()) {
         $issues->the_post();
-
-        if (get_field('live')) {
-            $issue_ids[] = get_the_ID();
-        }
+        $issue_ids[] = get_the_ID();
     }
 
     return $issue_ids;
@@ -141,10 +138,6 @@ function pw_prevnext($prev_or_next) {
     $next = $prev_or_next == 'next';
     $link_post = $next ? get_next_post() : get_previous_post();
     $id = $link_post->ID;
-
-    if (!get_field('live', $id)) {
-        return '&nbsp;';
-    }
 
     $wording = "Issue #" . get_field('issue_number', $id) . " &mdash; " . get_the_title($id);
     $link = get_permalink($id);
