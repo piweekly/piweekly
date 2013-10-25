@@ -46,6 +46,10 @@
         .mcnImage{
             vertical-align:bottom;
         }
+        .centered{
+             display:block;
+             margin:0 auto;
+        }
         .mcnTextContent img{
             height:auto !important;
         }
