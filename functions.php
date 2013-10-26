@@ -154,7 +154,7 @@ function pw_next_issue_link() {
 
 add_filter('previous_post_link', 'pw_previous_issue_link', 10, 0);
 function pw_previous_issue_link() {
-    return get_next_post() ? pw_prevnext('previous') : '&nbsp;';
+    return get_previous_post() ? pw_prevnext('previous') : '&nbsp;';
 }
 
 function pw_header_tag($open=true) {
