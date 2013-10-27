@@ -57,6 +57,10 @@
         clear: both;
     }
 
+    .home #main {
+        margin-top: 0;
+    }
+
     .home #main form {
         margin-top: 0;
     }
@@ -65,13 +69,17 @@
         max-width: 95%;
     }
 
-    ul.archive li.archive-issue {
+    li.archive-issue {
         width: 50%;
+    }
+
+    .home li.archive-issue {
+        margin: 10px 0;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    ul.archive li.archive-issue {
+    li.archive-issue {
         float: left;
         width: 100%;
     }
