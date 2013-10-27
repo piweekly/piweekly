@@ -89,19 +89,6 @@ function timestamped_stylesheet($stylesheet='style.css') {
 
 // Pi Weekly specific functions
 
-function pw_get_latest_issues() {
-    $issues = new WP_Query('posts_per_page=3');
-
-    $issue_ids = array();
-
-    while ($issues->have_posts()) {
-        $issues->the_post();
-        $issue_ids[] = get_the_ID();
-    }
-
-    return $issue_ids;
-}
-
 function pw_title() {
     bloginfo('title');
     if (is_front_page()) {

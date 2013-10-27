@@ -9,7 +9,7 @@ the_post();
 <article class="issue">
     <header>
         <h1>Issue #<?php the_field('issue_number'); ?> &mdash; <?php the_title(); ?></h1>
-        <div class="date"><?php echo pw_date_format(get_the_date()); ?></div>
+        <div class="date"><?php the_date(); ?></div>
     </header>
 
     <?php the_content(); ?>
