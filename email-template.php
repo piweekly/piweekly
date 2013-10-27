@@ -10,19 +10,24 @@ if (has_post_thumbnail()) {
     include 'border-thin.php';
 }
 
-$section_title = "News";
-$section = "news";
-include 'links-section.php';
-include 'border-thin.php';
+if (get_field('news')) {
+    $section_title = "News";
+    $section = "news";
+    include 'links-section.php';
+    include 'border-thin.php';
+}
+if (get_field('projects')) {
+    $section_title = "Projects";
+    $section = "projects";
+    include 'links-section.php';
+    include 'border-thin.php';
+}
 
-$section_title = "Projects";
-$section = "projects";
-include 'links-section.php';
-include 'border-thin.php';
-
-$section_title = "Articles & more";
-$section = "articles";
-include 'links-section.php';
+if (get_field('articles')) {
+    $section_title = "Articles & more";
+    $section = "articles";
+    include 'links-section.php';
+}
 
 if (get_field('interview')) {
     include 'border-thin.php';
