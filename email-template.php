@@ -34,6 +34,11 @@ if (get_field('interview')) {
     include 'interview.php';
 }
 
+if (get_field('events')) {
+    include 'border-thin.php';
+    include 'events.php';
+}
+
 if (get_field('sponsor')) {
     include 'border-thin.php';
     include 'sponsor.php';
