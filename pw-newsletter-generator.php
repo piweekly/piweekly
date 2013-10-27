@@ -19,15 +19,12 @@ function pw_generate_newsletter() {
     include 'newsletter-generator.php';
 }
 
+// Functions used in template
+
 function get_domain_from_url($url) {
     $parsed_url = parse_url($url);
     $domain = str_replace('www.', '', $parsed_url['host']);
     return $domain;
-}
-
-function get_date($date) {
-    $datetime = new DateTime($date);
-    return $datetime->format('l j F Y');
 }
 
 function strip_paragraphs($content) {
