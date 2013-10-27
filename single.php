@@ -26,47 +26,41 @@ the_post();
     <?php endif;
 
     if (get_field('news')): ?>
-
-    <h2>News</h2>
-    <ul>
-    <?php while (has_sub_field('news')): ?>
-        <li>
-            <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
-            <?php the_sub_field('summary'); ?>
-        </li>
-    <?php endwhile; ?>
-    </ul>
-    <hr />
-
+        <h2>News</h2>
+        <ul>
+        <?php while (has_sub_field('news')): ?>
+            <li>
+                <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
+                <?php the_sub_field('summary'); ?>
+            </li>
+        <?php endwhile; ?>
+        </ul>
+        <hr />
     <?php endif;
 
     if (get_field('projects')): ?>
-
-    <h2>Projects</h2>
-    <ul>
-    <?php while (has_sub_field('projects')): ?>
-        <li>
-            <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
-            <?php the_sub_field('summary'); ?>
-        </li>
-    <?php endwhile; ?>
-    </ul>
-    <hr />
-
+        <h2>Projects</h2>
+        <ul>
+        <?php while (has_sub_field('projects')): ?>
+            <li>
+                <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
+                <?php the_sub_field('summary'); ?>
+            </li>
+        <?php endwhile; ?>
+        </ul>
+        <hr />
     <?php endif;
 
     if (get_field('articles')): ?>
-
-    <h2>Articles &amp; more</h2>
-    <ul>
-    <?php while (has_sub_field('articles')): ?>
-        <li>
-            <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
-            <?php the_sub_field('summary'); ?>
-        </li>
-    <?php endwhile; ?>
-    </ul>
-
+        <h2>Articles &amp; more</h2>
+        <ul>
+        <?php while (has_sub_field('articles')): ?>
+            <li>
+                <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo get_domain_from_url(get_sub_field('url')); ?>)<br />
+                <?php the_sub_field('summary'); ?>
+            </li>
+        <?php endwhile; ?>
+        </ul>
     <?php endif;
 
     if (get_field('interview')):
@@ -80,12 +74,24 @@ the_post();
         <a href="<?php echo get_permalink($interview); ?>" target="_blank">Read the full interview</a>
     <?php endif;
 
+    if (get_field('events')): ?>
+        <hr />
+        <h2>Upcoming Events</h2>
+        <ul>
+        <?php while (has_sub_field('events')): ?>
+            <li>
+                <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a> (<?php echo pw_event_date(get_sub_field('start_date'), get_sub_field('end_date')); ?>)
+            </li>
+        <?php endwhile; ?>
+        </ul>
+    <?php endif;
+
     if (get_field('sponsor')): ?>
         <hr />
         <h2>Thanks to our sponsor</h2>
-            <a href="<?php the_field('sponsor_url'); ?>" target="_blank">
-                <img src="<?php $logo = get_field('sponsor_logo'); echo $logo['sizes']['email']; ?>" />
-            </a>
+        <a href="<?php the_field('sponsor_url'); ?>" target="_blank">
+            <img src="<?php $logo = get_field('sponsor_logo'); echo $logo['sizes']['email']; ?>" />
+        </a>
         <?php the_field('sponsor_text');
     endif; ?>
 

@@ -159,3 +159,20 @@ function pw_centred_pages() {
         echo "centred";
     }
 }
+
+function pw_event_date($start, $end) {
+    $start_date = new DateTime($start);
+    $end_date = new DateTime($end);
+
+    if (!$end) {
+        return $start_date->format('d F');
+    }
+    else {
+        if ($start_date->format('M') == $end_date->format('M')) {
+            return "{$start_date->format('d')} - {$end_date->format('d F')}";
+        }
+        else {
+            return "{$start_date->format('d F')} - {$end_date->format('d F')}";
+        }
+    }
+}
