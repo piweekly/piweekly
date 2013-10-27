@@ -23,7 +23,9 @@ the_post();
 
         <?php the_field('picture_description'); ?>
         <hr />
-    <?php endif; ?>
+    <?php endif;
+
+    if (get_field('news')): ?>
 
     <h2>News</h2>
     <ul>
@@ -36,6 +38,10 @@ the_post();
     </ul>
     <hr />
 
+    <?php endif;
+
+    if (get_field('projects')): ?>
+
     <h2>Projects</h2>
     <ul>
     <?php while (has_sub_field('projects')): ?>
@@ -47,6 +53,10 @@ the_post();
     </ul>
     <hr />
 
+    <?php endif;
+
+    if (get_field('articles')): ?>
+
     <h2>Articles &amp; more</h2>
     <ul>
     <?php while (has_sub_field('articles')): ?>
@@ -57,7 +67,9 @@ the_post();
     <?php endwhile; ?>
     </ul>
 
-    <?php if (get_field('interview')):
+    <?php endif;
+
+    if (get_field('interview')):
         $interview = array_pop(get_field('interview')); ?>
         <hr />
         <h2>Interview: <?php echo get_the_title($interview); ?></h2>
