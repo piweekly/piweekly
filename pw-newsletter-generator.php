@@ -36,14 +36,14 @@ function pw_event_date($start, $end) {
     $end_date = new DateTime($end);
 
     if (!$end) {
-        return $start_date->format('d F');
+        return $start_date->format('j F');
     }
     else {
         if ($start_date->format('M') == $end_date->format('M')) {
-            return "{$start_date->format('d')} - {$end_date->format('d F')}";
+            return "{$start_date->format('j')} - {$end_date->format('j F')}";
         }
         else {
-            return "{$start_date->format('d F')} - {$end_date->format('d F')}";
+            return "{$start_date->format('j F')} - {$end_date->format('j F')}";
         }
     }
 }
