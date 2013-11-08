@@ -63,8 +63,9 @@ the_post();
         </ul>
     <?php endif;
 
-    if (get_field('interview')):
-        $interview = array_pop(get_field('interview')); ?>
+    $interview = array_pop(get_field('interview'));
+
+    if ($interview): ?>
         <hr />
         <h2>Interview: <?php echo get_the_title($interview); ?></h2>
         <a href="<?php echo get_permalink($interview); ?>" target="_blank">
