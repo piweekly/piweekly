@@ -30,12 +30,14 @@ if (get_field('articles')) {
     include 'links-section.php';
 }
 
-$interviews = get_field('interview');
+$interview = get_field('interview');
 
-if ($interviews) {
-    $interview = array_pop($interviews);
-    include 'border-thin.php';
-    include 'interview.php';
+if (is_array($interview)) {
+    $interview = array_pop($interview);
+    if ($interview) {
+        include 'border-thin.php';
+        include 'interview.php';
+    }
 }
 
 if (get_field('events')) {

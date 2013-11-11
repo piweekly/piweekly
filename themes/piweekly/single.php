@@ -63,18 +63,20 @@ the_post();
         </ul>
     <?php endif;
 
-    $interviews = get_field('interview');
+    $interview = get_field('interview');
 
-    if ($interviews):
-        $interview = array_pop($interviews); ?>
-        <hr />
-        <h2>Interview: <?php echo get_the_title($interview); ?></h2>
-        <a href="<?php echo get_permalink($interview); ?>" target="_blank">
-            <?php echo get_the_post_thumbnail($interview, 'email'); ?>
-        </a>
-        <?php echo get_field('intro', $interview); ?>
-        <a href="<?php echo get_permalink($interview); ?>" target="_blank">Read the full interview</a>
+    if (is_array($interview)):
+        $interview = array_pop($interview);
+        if ($interview): ?>
+            <hr />
+            <h2>Interview: <?php echo get_the_title($interview); ?></h2>
+            <a href="<?php echo get_permalink($interview); ?>" target="_blank">
+                <?php echo get_the_post_thumbnail($interview, 'email'); ?>
+            </a>
+            <?php echo get_field('intro', $interview); ?>
+            <a href="<?php echo get_permalink($interview); ?>" target="_blank">Read the full interview</a>
     <?php endif;
+    endif;
 
     if (get_field('events')): ?>
         <hr />
