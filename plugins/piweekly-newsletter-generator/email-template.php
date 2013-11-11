@@ -29,9 +29,10 @@ if (get_field('articles')) {
     include 'links-section.php';
 }
 
-$interview = array_pop(get_field('interview'));
+$interviews = get_field('interview');
 
-if ($interview) {
+if ($interviews) {
+    $interview = array_pop($interviews);
     include 'border-thin.php';
     include 'interview.php';
 }
