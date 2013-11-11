@@ -100,8 +100,13 @@ the_post();
     <hr />
     <h2>Contact &amp; Submissions</h2>
     <p>This newsletter is curated by <a href="http://twitter.com/ben_nuttall" target="_blank">@ben_nuttall</a> and <a href="http://twitter.com/ryanteck" target="_blank">@ryanteck</a>. Tweet links to <a href="http://twitter.com/pi_weekly" target="_blank">@pi_weekly</a> or email <a href="mailto:submissions@piweekly.net" target="_blank">submissions@piweekly.net</a></p>
-    <hr class="thick" />
+    <span class="support">
+        <a href="/sponsorship/">Sponsor Pi Weekly</a> or <a href="https://www.gittip.com/piweekly" target="_blank">support us on gittip</a>
+    </span>
+    <a href="https://www.gittip.com/piweekly" target="_blank" class="gittip-support">&gt;3</a>
+    <div style="clear: both;"></div>
 
+    <hr class="thick" />
     <div class="signup">
         <p>Like the look of this newsletter? Sign up to Pi Weekly now:</p>
         <form action="http://bennuttall.us7.list-manage2.com/subscribe/post?u=a3e42d3ea4355ad45198b39ba&amp;id=2141506785" method="post" name="mc-embedded-subscribe-form">

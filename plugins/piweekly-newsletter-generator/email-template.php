@@ -16,6 +16,7 @@ if (get_field('news')) {
     include 'links-section.php';
     include 'border-thin.php';
 }
+
 if (get_field('projects')) {
     $section_title = "Projects";
     $section = "projects";
