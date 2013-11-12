@@ -387,3 +387,11 @@ ul li {
     left: 120px;
     font-size: 12px;
 }
+
+#footer .icons {
+    margin: 20px 0;
+}
+
+#footer .icons a {
+    margin: 0 10px;
+}

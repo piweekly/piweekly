@@ -1,14 +1,13 @@
-<a href="https://twitter.com/pi_weekly" class="twitter-follow-button" data-show-count="false">Follow @pi_weekly</a><br />
-<a href="https://twitter.com/ben_nuttall" class="twitter-follow-button" data-show-count="false">Follow @ben_nuttall</a>
-<a href="https://twitter.com/ryanteck" class="twitter-follow-button" data-show-count="false">Follow @ryanteck</a><br />
+<script type="text/javascript" language="JavaScript" src="http://piweekly.us7.list-manage.com/subscriber-count?b=11&u=50a341f5-6390-4e2a-a315-b2ab55cb32f5&id=2141506785"></script>
 
-<script type="text/javascript" language="JavaScript" src="http://piweekly.us7.list-manage.com/subscriber-count?b=11&u=50a341f5-6390-4e2a-a315-b2ab55cb32f5&id=2141506785"></script><br /><br />
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div class="icons">
+    <a href="https://twitter.com/pi_weekly" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/twitter-32x32.png" alt="Twitter" title="Follow us on Twitter @pi_weekly" /></a>
+    <a href="https://plus.google.com/+PiweeklyNet" rel="publisher" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/google-plus-32x32.png" alt="Google+" title="Google+" /></a>
+    <a href="https://www.github.com/bennuttall/piweekly" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/github-32x32.png" alt="Github" title="Browse the Pi Weekly repository on Github" /></a>
+    <a href="https://www.gittip.com/piweekly" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/gittip-32x32.png" alt="Gittip" title="Support us on Gittip" /></a>
+    <a href="http://www.google.com/producer/editions/CAowrMinBw/piweekly" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/google-currents-32x32.png" alt="Google Currents" title="Subscribe via Google Currents" /></a>
+    <a href="<?php bloginfo('atom_url'); ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/rss-32x32.png" alt="RSS" title="Subscribe via RSS" /></a>
+</div>
 
-<a href="http://us7.campaign-archive1.com/feed?u=a3e42d3ea4355ad45198b39ba&id=2141506785" title="Subscribe via RSS"><img src="<?php bloginfo('template_url'); ?>/images/rss.png" /></a><br />
-<a href="http://www.google.com/producer/editions/CAowrMinBw/piweekly" title="Google Currents"><img src="<?php bloginfo('template_url'); ?>/images/currents.png" /></a><br />
-<a href="https://plus.google.com/115314740509856081162" rel="publisher">Google+</a>
-<br/>
-
-piweekly.net is a community project by <a href="http://twitter.com/ben_nuttall">Ben Nuttall</a> and <a href="http://twitter.com/ryanteck">Ryan Walmsley</a>.<br />
-<a href="https://github.com/bennuttall/piweekly"><em>piweekly</em></a> Wordpress Theme by <a href="http://bennuttall.com/">Ben Nuttall</a> - source available on <a href="https://github.com/bennuttall/piweekly">github</a>.
+Pi Weekly is a community project by <a href="http://twitter.com/ben_nuttall" target="_blank">Ben Nuttall</a> and <a href="http://twitter.com/ryanteck" target="_blank">Ryan Walmsley</a>.<br />
+<a href="https://github.com/bennuttall/piweekly" target="_blank"><em>piweekly</em></a> Wordpress Theme by <a href="http://bennuttall.com/" target="_blank">Ben Nuttall</a> - source available on <a href="https://github.com/bennuttall/piweekly" target="_blank">github</a>.
