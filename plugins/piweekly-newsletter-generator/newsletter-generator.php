@@ -36,6 +36,10 @@ include 'email-template.php';
     <input type="submit" value="Edit this Issue" />
 </form>
 
+<form action="<?php the_permalink(); ?>" target="_new" style="float:left;">
+    <input type="submit" value="View this Issue" />
+</form>
+
 <form action="http://mailchimp.com/" target="_new" style="float:left;">
     <input type="submit" value="Go to Mailchimp" />
 </form>
