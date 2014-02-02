@@ -36,7 +36,7 @@ include 'email-template.php';
     <input type="submit" value="Edit this Issue" />
 </form>
 
-<form action="<?php the_permalink(); ?>" target="_new" style="float:left;">
+<form action="<?php the_permalink(); ?>" style="float:left;">
     <input type="submit" value="View this Issue" />
 </form>
 
