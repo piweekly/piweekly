@@ -343,7 +343,7 @@ ul li {
     float: left;
 }
 
-.issue .signup {
+.issue .signup, .issue .newsletter-generator-link {
     text-align: center;
 }
 
@@ -351,13 +351,13 @@ ul li {
     font-weight: bold;
 }
 
-.issue .signup form input {
+.issue form input {
     height: 22px;
     padding: 2px;
     margin: 2px;
 }
 
-.issue .signup form input[type="submit"] {
+.issue form input[type="submit"] {
     width: 100px;
     height: 28px;
     font-size: 16px;
@@ -366,6 +366,10 @@ ul li {
     color: #fff;
     cursor: pointer;
     border: none;
+}
+
+.issue .newsletter-generator-link form input[type="submit"] {
+    width: 160px;
 }
 
 .issue form input:focus {

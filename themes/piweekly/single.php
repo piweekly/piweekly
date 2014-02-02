@@ -119,6 +119,15 @@ the_post();
     </div>
     <hr class="thick" />
 
+    <?php if (is_user_logged_in()): ?>
+        <div class="newsletter-generator-link">
+            <form action="/wp-admin/admin.php?page=pw-newsletter" method="post">
+                <input type="hidden" name="issue" value="<?php the_ID(); ?>" />
+                <input type="submit" value="Newsletter generator">
+            </form>
+        </div>
+    <?php endif; ?>
+
     <footer>
         <nav class="prev"><?php previous_post_link(); ?></nav>
         <nav class="next"><?php next_post_link(); ?></nav>
