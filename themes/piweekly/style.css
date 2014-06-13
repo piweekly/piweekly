@@ -117,7 +117,7 @@ body {
     text-align: center;
 }
 
-a:link {color: #862D33; text-decoration: none;}
+a:link {color: #862D33;}
 a:visited {color: #5C1F25;}
 a:hover {text-decoration: underline;}
 
@@ -128,6 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 22px;
     margin: 10px 0;
+    line-height: 100px;
 }
 
 .home h1 {
@@ -204,6 +205,10 @@ h3 {font-size: 18px;}
     font-weight: bold;
 }
 
+#nav ul li a {
+    text-decoration: none;
+}
+
 #nav ul li.current_page_item a, .single-post #nav ul li#menu-item-25 a, #nav ul li a:hover {
     text-decoration: underline;
 }
@@ -213,6 +218,7 @@ h3 {font-size: 18px;}
     width: 720px;
     padding-bottom: 200px;
     text-align: left;
+    line-height: 22px;
 }
 
 #main.centred, #main .notfound {
@@ -267,6 +273,10 @@ li.archive-issue {
     margin-bottom: 20px;
 }
 
+li.archive-issue a {
+    text-decoration: none;
+}
+
 .home li.archive-issue {
     margin: 40px 0;
 }
@@ -312,10 +322,6 @@ ul li {
 
 .issue ul li {
     margin-bottom: 15px;
-}
-
-.issue ul li a {
-    text-decoration: underline;
 }
 
 .issue hr {
@@ -390,6 +396,10 @@ ul li {
     bottom: 10px;
     left: 120px;
     font-size: 12px;
+}
+
+#footer a {
+    text-decoration: none;
 }
 
 #footer .icons {
