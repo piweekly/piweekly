@@ -88,6 +88,7 @@ the_post();
             </li>
         <?php endwhile; ?>
         </ul>
+        See more at <a href="http://www.raspberrypi.org/jam/">raspberrypi.org/jam</a>
     <?php endif;
 
     if (get_field('sponsor')): ?>
