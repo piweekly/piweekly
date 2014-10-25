@@ -334,16 +334,6 @@ ul li {
     height: 3px;
 }
 
-.issue .gittip-support {
-    display: inline;
-    float: left;
-    text-indent: -10000px;
-    width: 16px;
-    height: 16px;
-    margin-left: 5px;
-    background: url('images/gittip-16x16.png');
-}
-
 .issue .support {
     float: left;
 }
