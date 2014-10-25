@@ -1,23 +1,7 @@
-<?php
+<?php get_header();
 
-get_header();
+the_post(); ?>
 
-the_post();
-
-?>
-
-<script>
-  (function() {
-    var cx = '014439275497510315703:lkkdltymjyg';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
+<iframe src="http://duckduckgo.com/search.html?width=400&site=piweekly.net&prefill=Search&focus=yes" style="display: block;overflow:hidden;margin:0 auto;padding:0;width:458px;height:40px;" frameborder="0"></iframe>
 
 <?php get_footer();
